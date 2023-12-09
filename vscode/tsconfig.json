@@ -1,0 +1,30 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "rootDir": ".",
+    "outDir": "dist/tsc",
+    "jsx": "react-jsx",
+    "lib": ["ESNext", "DOM"],
+  },
+  "include": [
+    "src",
+    "test/fixtures",
+    "playwright.config.ts",
+    "test/e2e",
+    "webviews",
+    "vite.config.ts",
+    "package.json",
+    ".storybook/*.ts",
+    "../lib/shared/src/telemetry/EventLogger.ts",
+  ],
+  "exclude": ["scripts", "dist", "test/integration", "**/test-data"],
+  "references": [
+    {
+      "path": "../lib/shared",
+    },
+    {
+      "path": "../lib/ui",
+    },
+  ],
+}
